@@ -5,7 +5,7 @@
 |password|string|null: false|
 |username|string|null: false, unique: true|
 ### Association
-- has_many :groups_users
+- has_many :groups, through:  :groups_users
 - has_many :posts
 
 ## postsテーブル
@@ -35,5 +35,5 @@
 |groups_users_id|integer|null: false, foreign_key: true|
 ### Association
 - has_many :posts
-- has_many :groups_users
+- has_many :users, through:  :groups_users
 
