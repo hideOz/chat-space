@@ -1,0 +1,37 @@
+.main
+  .main__group-info
+    .main__group-info__left-box
+      %p.main__group-info__left-box__current-group
+        current-group
+      %p.main__group-info__left-box__member-list
+        member-list
+    .main__group-info__edit-btn
+      = link_to "#" do
+        Edit
+  .main__messages
+    .main__messages__message
+      .main__messages__message__info
+        %p.main__messages__message__info__talker
+          user-name
+        %p.main__messages__message__info__date
+          2020/03/06(Fri) 00:00:00
+      %p.main__messages__message__text
+        ohayooooo!
+
+    .main__messages__message
+      .main__messages__message__info
+        %p.main__messages__message__info__talker
+          user-name
+        %p.main__messages__message__info__date
+          2020/03/06(Fri) 00:00:00
+      %p.main__messages__message__text
+        ohayooooo!
+
+  .main__form
+    %form.main__form__input-box{enctype: "multipart/form-data", method: "post"}
+      %input.main__form__input-box__text{name: "message", placeholder: "メッセージを入力して下さい", type: "text"}/
+      %label.main__form__input-box__image{for: "message_image"}
+        = icon('far', 'image')
+        %input.main__form__input-box__image__file{type: "file", id: "message_image"}
+    %input.main__form__submit-btn{type: "submit", value: "send"}
+
