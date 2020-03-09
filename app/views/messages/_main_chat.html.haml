@@ -28,10 +28,10 @@
         ohayooooo!
 
   .main__form
-    %form.main__form__input-box{:enctype => "multipart/form-data", :method => "post"}
-      %input.main__form__input-box__text{:name => "message", :placeholder => "メッセージを入力して下さい", :type => "text"}/
-      %label.main__form__input-box__image{:for => "message_image"}
+    %form.main__form__input-box{enctype: "multipart/form-data", method: "post"}
+      %input.main__form__input-box__text{name: "message", placeholder: "メッセージを入力して下さい", type: "text"}/
+      %label.main__form__input-box__image{for: "message_image"}
         = icon('far', 'image')
-        %input.main__form__input-box__image__file{:type => "file", :id => "message_image"}
-    %input.main__form__submit-btn{:type => "submit", :value => "send"}
+        %input.main__form__input-box__image__file{type: "file", id: "message_image"}
+    %input.main__form__submit-btn{type: "submit", value: "send"}
 
